@@ -51,7 +51,7 @@ def update_soul_txt(public_url):
 def update_vps_soul_txt(public_url):
     vps_ip = "157.173.113.94"
     vps_user = "root"
-    vps_password = "0522@Kangaru"
+    vps_password = "0522@Ziyawakeel"
 
     try:
         ssh = paramiko.SSHClient()
@@ -116,7 +116,7 @@ def run_flask_app():
         if not ip or not port or not duration:
             return jsonify({'error': 'Missing parameters'}), 400
 
-        command = f"./Spike {ip} {port} {duration} 256 1000"
+        command = f"./Spike {ip} {port} {duration} 4 1000"
         response = execute_command_async(command, int(duration))
         return jsonify(response)
 
